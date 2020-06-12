@@ -1,6 +1,24 @@
-package com.company;
+/*
+ *
+ * Classname: Student
+ *
+ * 12 June 2020
+ *
+ * Copyright Zaichenko Vladyslav KNUTE
+ *
+ * Module 2 task 4
+ *
+ * Programming patterns. Factory, Builder.
+ *
+ * Develop for your class
+ * 1. Factory.
+ * 2. Abstract factory.
+ * 3. Create a class Student  - 25 fields.
+ * 4. Create a builder for the class Student
+ *
+ */
 
-import java.time.LocalDate;
+package com.company;
 
 public class Student {
 
@@ -9,26 +27,65 @@ public class Student {
     private String patronymic;
     private String firstNameTeacher;
     private String lastNameTeacher;
+
     private String patronymicTeacher;
     private String university;
+    // enum Speciality: DESIGN, SOFTWARE_ENGINEERING, NETWORKS, GUI
     private Speciality speciality;
     private boolean privilege;
     private int course;
+
     private boolean contract;
     private boolean fullTimeEducation;
     private boolean militaryDepartment;
     private boolean departmentOfSports;
     private boolean scientificWork;
+
     private boolean activist;
     private boolean driverLicense;
     private boolean chummery;
+    // enum Gender: MALE, FEMALE
     private Gender gender;
     private String nationality;
+
     private String eyeColor;
     private String hairColor;
     private int weight;
     private int height;
     private int age;
+
+    /*
+    * Class constructor with parameters
+    * @param firstName String, set the student First name
+    * @param lastName String, set the student Last name
+    * @param patronymic String, set the student patronymic
+    * @param firstNameTeacher String, set the First name of student teacher
+    * @param lastNameTeacher String, set the Last name of student teacher
+    *
+    * @param patronymicTeacher String, set the patronymic of student teacher
+    * @param university String, set the student university
+    * @param speciality enum Speciality, set the student speciality
+    * @param privilege boolean, set the availability of privilege
+    * @param course int, set the student course
+    *
+    * @param contract boolean, set the availability of contract
+    * @param fullTimeEducation boolean, set checking form of education
+    * @param militaryDepartment boolean, set checking military department
+    * @param departmentOfSports boolean, set checking department of sports
+    * @param scientificWork boolean, set checking the scientific work
+    *
+    * @param activist boolean, set checking the scientific work
+    * @param driverLicense boolean, set checking the driver license
+    * @param chummery boolean, set checking the chummery
+    * @param gender enum Gender, set the student gender
+    * @param nationality String, set the student nationality
+    *
+    * @param eyeColor String, set the student eye color
+    * @param hairColor String, set the student hair color
+    * @param weigth int, set the student weigth
+    * @param heigth int, set the student heigth
+    * @param age int, set the student age
+    */
 
     public Student(String firstName,
                    String lastName,
@@ -83,17 +140,30 @@ public class Student {
         this.age = age;
     }
 
+    // default empty constructor
+    public Student() {
+    }
+
+    /**
+     * Getter for field Student firstName
+     * @return Returns first name of object Student
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     * Setter for field Student firstName
+     * @oaram firstName sets first name of object Student
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
+
+    // For the next 24 pairs getters and setters, everything is exactly the same
+
+    public String getLastName() { return lastName; }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
@@ -283,6 +353,8 @@ public class Student {
         this.age = age;
     }
 
+    // Method toString() for class Student
+
     @Override
     public String toString() {
         return "Student{" +
@@ -313,4 +385,188 @@ public class Student {
                 "Age - " + age +
                 '}';
     }
+
+    // Builder for class Student
+    public static class Builder{
+        private Student studentToBuild;
+
+
+       /*
+        * Pattern Builder take basic Student
+        * with all setters for StudentToBuild
+        */
+        public Builder() {
+            this.studentToBuild = new Student();
+        }
+
+        /*
+        * Constructor setSimilarTo complements new object example
+        * StudentToBuild with the first example in basis
+        */
+        public Builder setSimilarTo(Student student){
+            this.studentToBuild.firstName = student.firstName;
+            this.studentToBuild.lastName = student.lastName;
+            this.studentToBuild.patronymic = student.patronymic;
+            this.studentToBuild.firstNameTeacher = student.firstNameTeacher;
+            this.studentToBuild.lastNameTeacher = student.lastNameTeacher;
+            this.studentToBuild.patronymicTeacher = student.patronymicTeacher;
+            this.studentToBuild.university = student.university;
+            this.studentToBuild.speciality = student.speciality;
+            this.studentToBuild.privilege = student.privilege;
+            this.studentToBuild.course = student.course;
+            this.studentToBuild.contract = student.contract;
+            this.studentToBuild.fullTimeEducation = student.fullTimeEducation;
+            this.studentToBuild.militaryDepartment = student.militaryDepartment;
+            this.studentToBuild.departmentOfSports = student.departmentOfSports;
+            this.studentToBuild.scientificWork = student.scientificWork;
+            this.studentToBuild.activist = student.activist;
+            this.studentToBuild.driverLicense = student.driverLicense;
+            this.studentToBuild.chummery = student.chummery;
+            this.studentToBuild.gender = student.gender;
+            this.studentToBuild.nationality = student.nationality;
+            this.studentToBuild.eyeColor = student.eyeColor;
+            this.studentToBuild.hairColor = student.hairColor;
+            this.studentToBuild.weight = student.weight;
+            this.studentToBuild.height = student.height;
+            this.studentToBuild.age = student.age;
+            return this;
+        }
+
+        /**
+         * Setter for StudentToBuild of Student object firstName field
+         * @param firstName Sets first name of StudentToBuild object
+         */
+        public Builder setFirstName(String firstName){
+            studentToBuild.setFirstName(firstName);
+            return this;
+        }
+        // the same situation for all 24 fields with each own parameters
+
+        public Builder setLastName(String lastName){
+            studentToBuild.setLastName(lastName);
+            return this;
+        }
+
+        public Builder setPatronymic(String patronymic){
+            studentToBuild.setPatronymic(patronymic);
+            return this;
+        }
+
+        public Builder setFirstNameTeacher(String firstNameTeacher){
+            studentToBuild.setFirstNameTeacher(firstNameTeacher);
+            return this;
+        }
+
+        public Builder setLastNameTeacher(String lastNameTeacher){
+            studentToBuild.setLastNameTeacher(lastNameTeacher);
+            return this;
+        }
+
+        public Builder setPatronymicTeacher(String patronymicTeacher){
+            studentToBuild.setPatronymicTeacher(patronymicTeacher);
+            return this;
+        }
+
+        public Builder setUniversity(String university){
+            studentToBuild.setUniversity(university);
+            return this;
+        }
+
+        public Builder setSpeciality(Speciality speciality){
+            studentToBuild.setSpeciality(speciality);
+            return this;
+        }
+
+        public Builder setPrivilege(boolean privilege){
+            studentToBuild.setPrivilege(privilege);
+            return this;
+        }
+
+        public Builder setCourse(int course){
+            studentToBuild.setCourse(course);
+            return this;
+        }
+
+        public Builder setContract(boolean contract){
+            studentToBuild.setContract(contract);
+            return this;
+        }
+
+        public Builder setFullTimeEducation(boolean fullTimeEducation){
+            studentToBuild.setFullTimeEducation(fullTimeEducation);
+            return this;
+        }
+
+        public Builder setMilitaryDepartment(boolean militaryDepartment){
+            studentToBuild.setMilitaryDepartment(militaryDepartment);
+            return this;
+        }
+
+        public Builder setDepartmentOfSports(boolean departmentOfSports){
+            studentToBuild.setDepartmentOfSports(departmentOfSports);
+            return this;
+        }
+
+        public Builder setScientificWork(boolean scientificWork){
+            studentToBuild.setScientificWork(scientificWork);
+            return this;
+        }
+
+        public Builder setActivist(boolean activist){
+            studentToBuild.setActivist(activist);
+            return this;
+        }
+
+        public Builder setDriverLicense(boolean driverLicense){
+            studentToBuild.setDriverLicense(driverLicense);
+            return this;
+        }
+
+        public Builder setChummery(boolean chummery){
+            studentToBuild.setChummery(chummery);
+            return this;
+        }
+
+        public Builder setGender(Gender gender){
+            studentToBuild.setGender(gender);
+            return this;
+        }
+
+        public Builder setNationality(String nationality){
+            studentToBuild.setNationality(nationality);
+            return this;
+        }
+
+        public Builder setEyeColor(String eyeColor){
+            studentToBuild.setEyeColor(eyeColor);
+            return this;
+        }
+
+        public Builder setHairColor(String hairColor){
+            studentToBuild.setHairColor(hairColor);
+            return this;
+        }
+
+        public Builder setWeight(int weight){
+            studentToBuild.setWeight(weight);
+            return this;
+        }
+
+        public Builder setHeight(int height){
+            studentToBuild.setHeight(height);
+            return this;
+        }
+
+        public Builder setAge(int age){
+            studentToBuild.setAge(age);
+            return this;
+        }
+
+        // Method returns a built Student object with all parameters
+        public Student build(){
+            return studentToBuild;
+        }
+
+    }
+
 }
