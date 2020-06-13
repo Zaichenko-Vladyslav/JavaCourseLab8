@@ -2,9 +2,13 @@
  *
  * Classname: Parallelogram
  *
+ * Version 2.0
+ *
  * 12 June 2020
  *
  * Copyright Zaichenko Vladyslav KNUTE
+ *
+ * Author Zaichenko Vladyslav
  *
  * Module 2 task 4
  *
