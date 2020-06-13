@@ -2,14 +2,9 @@
  *
  * Classname: Student
  *
- * Version 2.0
- *
- * 12 June 2020
- *
- * Copyright Zaichenko Vladyslav KNUTE
- *
- * Author Zaichenko Vladyslav
- *
+ * @version 12.06.2020
+ * @author Vladyslav Zaichenko
+
  * Module 2 task 4
  *
  * Programming patterns. Factory, Builder.
@@ -398,8 +393,34 @@ public class Student {
         }
 
         /*
-        * Constructor setSimilarTo complements new object example
+        * Method setSimilarTo complements new object example
         * StudentToBuild with the first example in basis
+        *
+        * @param firstName String, set the student First name
+        * @param lastName String, set the student Last name
+        * @param patronymic String, set the student patronymic
+        * @param firstNameTeacher String, set the First name of student teacher
+        * @param lastNameTeacher String, set the Last name of student teacher
+        * @param patronymicTeacher String, set the patronymic of student teacher
+        * @param university String, set the student university
+        * @param speciality enum Speciality, set the student speciality
+        * @param privilege boolean, set the availability of privilege
+        * @param course int, set the student course
+        * @param contract boolean, set the availability of contract
+        * @param fullTimeEducation boolean, set checking form of education
+        * @param militaryDepartment boolean, set checking military department
+        * @param departmentOfSports boolean, set checking department of sports
+        * @param scientificWork boolean, set checking the scientific work
+        * @param activist boolean, set checking the scientific work
+        * @param driverLicense boolean, set checking the driver license
+        * @param chummery boolean, set checking the chummery
+        * @param gender enum Gender, set the student gender
+        * @param nationality String, set the student nationality
+        * @param eyeColor String, set the student eye color
+        * @param hairColor String, set the student hair color
+        * @param weigth int, set the student weigth
+        * @param heigth int, set the student heigth
+        * @param age int, set the student age
         */
         public Builder setSimilarTo(Student student){
             this.studentToBuild.firstName = student.firstName;

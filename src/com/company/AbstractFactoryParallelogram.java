@@ -2,14 +2,9 @@
  *
  * Classname: AbstractFactoryParallelogram
  *
- * Version 2.0
- *
- * 12 June 2020
- *
- * Copyright Zaichenko Vladyslav KNUTE
- *
- * Author Zaichenko Vladyslav
- *
+ * @version 12.06.2020
+ * @author Vladyslav Zaichenko
+
  * Module 2 task 4
  *
  * Programming patterns. Factory, Builder.
