@@ -22,6 +22,12 @@ package com.company;
 
 public class ParallelogramFactory {
 
+        /*
+         * Class ParallelogramFactory with parameters
+         * @param sideA int, set the Paralelogram side A
+         * @param sideB int, set the Paralelogram side B
+         * @param angle int, set the Paralelogram angle
+         */
         public static Parallelogram create(int sideA, int sideB, double angle){
 
             Parallelogram parellelogram = new Parallelogram(sideA,sideB,angle);

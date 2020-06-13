@@ -22,69 +22,65 @@ package com.company;
 
 public class Student {
 
+    // firstName String, set the student First name
     private String firstName;
+    // lastName String, set the student Last name
     private String lastName;
+    // patronymic String, set the student patronymic
     private String patronymic;
+    // firstNameTeacher String, set the First name of student teacher
     private String firstNameTeacher;
+    // lastNameTeacher String, set the Last name of student teacher
     private String lastNameTeacher;
 
+    // patronymicTeacher String, set the patronymic of student teacher
     private String patronymicTeacher;
+    // university String, set the student university
     private String university;
+    // speciality enum Speciality, set the student speciality
     // enum Speciality: DESIGN, SOFTWARE_ENGINEERING, NETWORKS, GUI
     private Speciality speciality;
+    // privilege boolean, set the availability of privilege
     private boolean privilege;
+    // course int, set the student course
     private int course;
 
+    // contract boolean, set the availability of contract
     private boolean contract;
+    // fullTimeEducation boolean, set checking form of education
     private boolean fullTimeEducation;
+    // militaryDepartment boolean, set checking military department
     private boolean militaryDepartment;
+    // departmentOfSports boolean, set checking department of sports
     private boolean departmentOfSports;
+    // scientificWork boolean, set checking the scientific work
     private boolean scientificWork;
 
+    // activist boolean, set checking the scientific work
     private boolean activist;
+    // driverLicense boolean, set checking the driver license
     private boolean driverLicense;
+    // chummery boolean, set checking the chummery
     private boolean chummery;
+    // gender enum Gender, set the student gender
     // enum Gender: MALE, FEMALE
     private Gender gender;
+    // nationality String, set the student nationality
     private String nationality;
 
+    // eyeColor String, set the student eye color
     private String eyeColor;
+    // hairColor String, set the student hair color
     private String hairColor;
+    // weigth int, set the student weigth
     private int weight;
+    // heigth int, set the student heigth
     private int height;
+    // age int, set the student age
     private int age;
 
     /*
     * Class constructor with parameters
-    * @param firstName String, set the student First name
-    * @param lastName String, set the student Last name
-    * @param patronymic String, set the student patronymic
-    * @param firstNameTeacher String, set the First name of student teacher
-    * @param lastNameTeacher String, set the Last name of student teacher
-    *
-    * @param patronymicTeacher String, set the patronymic of student teacher
-    * @param university String, set the student university
-    * @param speciality enum Speciality, set the student speciality
-    * @param privilege boolean, set the availability of privilege
-    * @param course int, set the student course
-    *
-    * @param contract boolean, set the availability of contract
-    * @param fullTimeEducation boolean, set checking form of education
-    * @param militaryDepartment boolean, set checking military department
-    * @param departmentOfSports boolean, set checking department of sports
-    * @param scientificWork boolean, set checking the scientific work
-    *
-    * @param activist boolean, set checking the scientific work
-    * @param driverLicense boolean, set checking the driver license
-    * @param chummery boolean, set checking the chummery
-    * @param gender enum Gender, set the student gender
-    * @param nationality String, set the student nationality
-    *
-    * @param eyeColor String, set the student eye color
-    * @param hairColor String, set the student hair color
-    * @param weigth int, set the student weigth
-    * @param heigth int, set the student heigth
-    * @param age int, set the student age
     */
 
     public Student(String firstName,
@@ -154,7 +150,7 @@ public class Student {
 
     /**
      * Setter for field Student firstName
-     * @oaram firstName sets first name of object Student
+     * @param firstName sets first name of object Student
      */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -386,15 +382,13 @@ public class Student {
                 '}';
     }
 
-    // Builder for class Student
+    /*
+     * Pattern Builder take basic Student
+     * with all setters for StudentToBuild
+     */
     public static class Builder{
         private Student studentToBuild;
 
-
-       /*
-        * Pattern Builder take basic Student
-        * with all setters for StudentToBuild
-        */
         public Builder() {
             this.studentToBuild = new Student();
         }
@@ -432,7 +426,7 @@ public class Student {
             return this;
         }
 
-        /**
+        /*
          * Setter for StudentToBuild of Student object firstName field
          * @param firstName Sets first name of StudentToBuild object
          */

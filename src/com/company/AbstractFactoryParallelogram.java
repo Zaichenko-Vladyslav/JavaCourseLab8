@@ -22,6 +22,12 @@ package com.company;
 
 public class AbstractFactoryParallelogram {
 
+    /*
+     * Class AbstractFactoryParallelogram with parameters
+     * @param sideA int, set the Paralelogram or Rhombus side A
+     * @param sideB int, set the Paralelogram side B
+     * @param angle int, set the Paralelogram or Rhombus angle
+     */
     public static Parallelogram create(int sideA, int sideB, double angle){
         if (sideA == sideB ) {return
                 new Rhombus (sideA, angle);
