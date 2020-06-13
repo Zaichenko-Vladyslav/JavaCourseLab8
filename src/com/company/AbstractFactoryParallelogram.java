@@ -23,7 +23,7 @@ package com.company;
 public class AbstractFactoryParallelogram {
 
     /*
-     * Class AbstractFactoryParallelogram with parameters
+     * AbstractFactoryParallelogram with parameters
      * @param sideA int, set the Paralelogram or Rhombus side A
      * @param sideB int, set the Paralelogram side B
      * @param angle int, set the Paralelogram or Rhombus angle
