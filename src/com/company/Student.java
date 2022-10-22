@@ -12,7 +12,7 @@
  * Develop for your class
  * 1. Factory.
  * 2. Abstract factory.
- * 3. Create a class Student  - 25 fields.
+ * 3. Create a class Student - 25 fields.
  * 4. Create a builder for the class Student
  *
  */
@@ -23,58 +23,78 @@ public class Student {
 
     // firstName String, set the student First name
     private String firstName;
+
     // lastName String, set the student Last name
     private String lastName;
+
     // patronymic String, set the student patronymic
     private String patronymic;
+
     // firstNameTeacher String, set the First name of student teacher
     private String firstNameTeacher;
+
     // lastNameTeacher String, set the Last name of student teacher
     private String lastNameTeacher;
 
     // patronymicTeacher String, set the patronymic of student teacher
     private String patronymicTeacher;
+
     // university String, set the student university
     private String university;
+
     // speciality enum Speciality, set the student speciality
     // enum Speciality: DESIGN, SOFTWARE_ENGINEERING, NETWORKS, GUI
     private Speciality speciality;
+
     // privilege boolean, set the availability of privilege
     private boolean privilege;
+
     // course int, set the student course
     private int course;
 
     // contract boolean, set the availability of contract
     private boolean contract;
+
     // fullTimeEducation boolean, set checking form of education
     private boolean fullTimeEducation;
+
     // militaryDepartment boolean, set checking military department
     private boolean militaryDepartment;
+
     // departmentOfSports boolean, set checking department of sports
     private boolean departmentOfSports;
+
     // scientificWork boolean, set checking the scientific work
     private boolean scientificWork;
 
     // activist boolean, set checking the scientific work
     private boolean activist;
+
     // driverLicense boolean, set checking the driver license
     private boolean driverLicense;
+
     // chummery boolean, set checking the chummery
     private boolean chummery;
+
     // gender enum Gender, set the student gender
     // enum Gender: MALE, FEMALE
     private Gender gender;
+
     // nationality String, set the student nationality
     private String nationality;
 
     // eyeColor String, set the student eye color
     private String eyeColor;
+
     // hairColor String, set the student hair color
     private String hairColor;
+
     // weigth int, set the student weigth
     private int weight;
+
     // heigth int, set the student heigth
     private int height;
+
     // age int, set the student age
     private int age;
 
@@ -135,8 +155,8 @@ public class Student {
         this.age = age;
     }
 
-    // default empty constructor
     public Student() {
+
     }
 
     /**
@@ -155,10 +175,11 @@ public class Student {
         this.firstName = firstName;
     }
 
-
     // For the next 24 pairs getters and setters, everything is exactly the same
 
-    public String getLastName() { return lastName; }
+    public String getLastName() {
+        return lastName;
+    }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
@@ -352,7 +373,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Student {" + "\n" +
                 "First Name - '" + firstName + '\'' + "\n" +
                 "Last Name - '" + lastName + '\'' + "\n" +
                 "Patronymic - '" + patronymic + '\'' + "\n" +
@@ -377,7 +398,7 @@ public class Student {
                 "Hair Color - '" + hairColor + '\'' + "\n" +
                 "Weight - " + weight + "\n" +
                 "Height - " + height + "\n" +
-                "Age - " + age +
+                "Age - " + age + "\n" +
                 '}';
     }
 
@@ -386,6 +407,7 @@ public class Student {
      * with all setters for StudentToBuild
      */
     public static class Builder{
+
         private Student studentToBuild;
 
         public Builder() {
@@ -434,6 +456,7 @@ public class Student {
             studentToBuild.setFirstName(firstName);
             return this;
         }
+
         // the same situation for all 24 fields with each own parameters
 
         public Builder setLastName(String lastName){
@@ -560,7 +583,5 @@ public class Student {
         public Student build(){
             return studentToBuild;
         }
-
     }
-
 }

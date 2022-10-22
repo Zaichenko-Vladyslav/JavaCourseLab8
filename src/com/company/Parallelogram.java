@@ -12,7 +12,7 @@
  * Develop for your class
  * 1. Factory.
  * 2. Abstract factory.
- * 3. Create a class Student  - 25 fields.
+ * 3. Create a class Student - 25 fields.
  * 4. Create a builder for the class Student
  *
  */
@@ -25,15 +25,15 @@ public class Parallelogram {
     private int sideB;
     private double angle;
 
-    // default empty constructor
     public Parallelogram() {
+
     }
 
     /*
     * Class constructor with parameters
-    * @param sideA int, set the Paralelogram side A
-    * @param sideB int, set the Paralelogram side B
-    * @param angle int, set the Paralelogram angle
+    * @param sideA int, set the Parallelogram side A
+    * @param sideB int, set the Parallelogram side B
+    * @param angle int, set the Parallelogram angle
     */
     public Parallelogram(int sideA, int sideB, double angle) {
         this.sideA = sideA;
@@ -42,58 +42,57 @@ public class Parallelogram {
     }
 
     /*
-     * Getter for field Paralelogram sideA
-     * @return sideA of object Paralelogram
+     * Getter for field Parallelogram sideA
+     * @return sideA of object Parallelogram
      */
-    public int getSideA() {
+    public int getSide() {
         return sideA;
     }
 
     /*
-     * Setter for field Paralelogram sideA
-     * @oaram sideA sets side A of object Paralelogram
+     * Setter for field Parallelogram sideA
+     * @oaram sideA sets side A of object Parallelogram
      */
-    public void setSideA(int sideA) {
-        this.sideA = sideA;
+    public void setSide(int side) {
+        this.sideA = side;
     }
 
     /*
-     * Getter for field Paralelogram sideB
-     * @return sideB of object Paralelogram
+     * Getter for field Parallelogram sideB
+     * @return sideB of object Parallelogram
      */
     public int getSideB() {
         return sideB;
     }
 
     /*
-     * Setter for field Paralelogram sideB
-     * @oaram sideB sets side B of object Paralelogram
+     * Setter for field Parallelogram sideB
+     * @oaram sideB sets side B of object Parallelogram
      */
     public void setSideB(int sideB) {
         this.sideB = sideB;
     }
 
     /*
-     * Getter for field Paralelogram angle
-     * @return angle of object Paralelogram
+     * Getter for field Parallelogram angle
+     * @return angle of object Parallelogram
      */
     public double getAngle() {
         return angle;
     }
 
     /*
-     * Setter for field Paralelogram angle
-     * @oaram angle sets angle of object Paralelogram
+     * Setter for field Parallelogram angle
+     * @oaram angle sets angle of object Parallelogram
      */
     public void setAngle(double angle) {
         this.angle = angle;
     }
 
-
-    // Method toString() for class Paralelogram
+    // Method toString() for class Parallelogram
     @Override
     public String toString() {
-        return "Parallelogram{" +
+        return "Parallelogram {" +
                 "sideA=" + sideA +
                 ", sideB=" + sideB +
                 ", angle=" + angle +

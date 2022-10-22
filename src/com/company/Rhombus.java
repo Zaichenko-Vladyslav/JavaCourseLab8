@@ -12,7 +12,7 @@
  * Develop for your class
  * 1. Factory.
  * 2. Abstract factory.
- * 3. Create a class Student  - 25 fields.
+ * 3. Create a class Student - 25 fields.
  * 4. Create a builder for the class Student
  *
  */
@@ -21,44 +21,44 @@ package com.company;
 
 public class Rhombus extends Parallelogram {
 
-    private int sideA;
+    private int side;
     private double angle;
 
-    // default empty constructor
     public Rhombus() {
+
     }
 
     /*
      * Class constructor with parameters
-     * @param sideA int, set the Rhombus side A
+     * @param side int, set the Rhombus side
      * @param angle int, set the Rhombus angle
      */
-    public Rhombus(int sideA, double angle) {
-        super(sideA, sideA, angle);
-        this.sideA = sideA;
+    public Rhombus(int side, double angle) {
+        super(side, side, angle);
+        this.side = side;
         this.angle = angle;
     }
 
     /*
-     * Getter for field Rhombus sideA (implements from Paralelogram)
-     * @return sideA of object Rhombus
+     * Getter for field Rhombus side (implements from Parallelogram)
+     * @return side of object Rhombus
      */
     @Override
-    public int getSideA() {
-        return sideA;
+    public int getSide() {
+        return side;
     }
 
     /*
-     * Setter for field Rhombus sideA (implements from Paralelogram)
-     * @oaram sideA sets side A of object Rhombus
+     * Setter for field Rhombus side (implements from Parallelogram)
+     * @oaram side sets side of object Rhombus
      */
     @Override
-    public void setSideA(int sideA) {
-        this.sideA = sideA;
+    public void setSide(int side) {
+        this.side = side;
     }
 
     /*
-     * Getter for field Rhombus angle (implements from Paralelogram)
+     * Getter for field Rhombus angle (implements from Parallelogram)
      * @return angle of object Rhombus
      */
     @Override
@@ -67,7 +67,7 @@ public class Rhombus extends Parallelogram {
     }
 
     /*
-     * Setter for field Rhombus angle (implements from Paralelogram)
+     * Setter for field Rhombus angle (implements from Parallelogram)
      * @oaram angle sets angle of object Rhombus
      */
     @Override
@@ -78,8 +78,8 @@ public class Rhombus extends Parallelogram {
     // Method toString() for class Rhombus
     @Override
     public String toString() {
-        return "Rhombus{" +
-                "sideA=" + sideA +
+        return "Rhombus {" +
+                "side=" + side +
                 ", angle=" + angle +
                 '}';
     }

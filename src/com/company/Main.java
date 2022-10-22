@@ -12,7 +12,7 @@
  * Develop for your class
  * 1. Factory.
  * 2. Abstract factory.
- * 3. Create a class Student  - 25 fields.
+ * 3. Create a class Student - 25 fields.
  * 4. Create a builder for the class Student
  *
  */
@@ -23,25 +23,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-    // Paralelogram Factory
-
+        // Parallelogram Factory
         Parallelogram parallelogram1 = ParallelogramFactory.create(5,6,Math.PI / 3);
         System.out.println(parallelogram1);
 
-    // Abstract Paralelogram Factory
+        // Abstract Parallelogram Factory
+        Parallelogram parallelogram2 = AbstractFactoryParallelogram.create(4,4,Math.PI /4);
+        System.out.println(parallelogram2);
 
-        Parallelogram pr1 = AbstractFactoryParallelogram.create(4,4,Math.PI /4);
-        System.out.println(pr1);
-
-    // Student
-
-        Student student;
-        student = new Student("Zaichenko",
+        // Student
+        Student student = new Student("Zaichenko",
                 "Vladyslav",
-                "Yurievich",
-                "Roskladka",
-                "Andriy",
-                "Anatolievich",
+                "-",
+                "-",
+                "-",
+                "-",
                 "KNUTE",
                 Speciality.NETWORKS,
                 false,
@@ -64,15 +60,14 @@ public class Main {
 
         System.out.println(student);
 
-    // Student Artem Builder
-
-        Student Artem = new Student.Builder()
+        // Student Artem Builder
+        Student artem = new Student.Builder()
                 .setFirstName("Artem")
-                .setLastName("Ushenko")
-                .setPatronymic("Bohdanovich")
-                .setFirstNameTeacher("Posupevskiy")
+                .setLastName("-")
+                .setPatronymic("-")
+                .setFirstNameTeacher("-")
                 .setLastNameTeacher("Viktor")
-                .setPatronymicTeacher("Ihorovich")
+                .setPatronymicTeacher("-")
                 .setUniversity("KNUTE")
                 .setSpeciality(Speciality.GUI)
                 .setPrivilege(true)
@@ -94,17 +89,15 @@ public class Main {
                 .setAge(23)
                 .build();
 
-        System.out.println(Artem);
+        System.out.println(artem);
 
-    // Student Oleg is similar to Artem except the First Name and Last name
-
+        // Student Oleg is similar object to Artem except First Name and Last name
         Student Oleg = new Student.Builder()
-                .setSimilarTo(Artem)
+                .setSimilarTo(artem)
                 .setFirstName("Oleg")
-                .setLastName("Boyko")
+                .setLastName("-")
                 .build();
 
         System.out.println(Oleg);
-
     }
 }
